@@ -1,0 +1,631 @@
+/* -----全域----- */
+*{
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 0.1rem;
+  padding: 0;
+  margin: 0;
+}
+/* section header */
+#header{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+/* -----標題----- */
+#header .col-sm-12.col-md-1.col-lg-1.col-xl-1.border.border-white.mb-0.text-center.navbar-text.h1{
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0;
+  min-width: 136.15px;
+}
+nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fadeInDown{
+  --animate-duration: 1.5s;
+}
+#header a.nav-item.nav-link.text-left{
+  color: white;
+  transition: all 0.75s ease;
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 0.65;
+}
+#header a.nav-item.nav-link.text-left:hover{
+  opacity: 1;
+}
+#header .line{
+  background-color: white;
+  height: 0.15rem;
+  width: 0;
+  transform-origin: 0% 50%;
+}
+@keyframes line {
+  0%{width: 0px;}
+  100%{width: 75%;opacity: 1;}
+  }
+@keyframes line2 {
+  0%{width: 75%;opacity: 1;}
+  100%{width: 0px;}
+  }
+/* 隱藏列表 */
+#header .col-12.d-flex.align-items-center.justify-content-center{
+  height: 3rem;
+}
+.container-fluid.d-md-none.d-flex.justify-content-center{
+  position: absolute;
+}
+#list{
+  position: absolute;
+  top: 17%;
+}
+/* 背景圖 */
+#header .main_img.vh-100{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* 背景圖縮放動畫 */
+@keyframes scale {
+  0%{transform:scale(1.1) ;}
+  100%{transform:scale(1);}
+}
+
+/* 中央文字-1 */
+#header h1.centerText{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+}
+#header div.mainText{
+  transform-origin: 50% 50%;
+  transform: rotate(-5deg);
+}
+#header span.aText{
+  font-family: 'Yesteryear', cursive;
+  letter-spacing: 0.2rem;
+  box-sizing: border-box;
+  white-space:nowrap;
+  font-size: 8.5rem;
+  opacity: 0;
+  text-shadow: 0.5px 0.5px 10px #000000;
+  }
+/* 中央文字動畫 */
+@keyframes aText {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+/* 中央文字-2 */
+#header .h2.text-white{
+position: absolute;
+top:57%;
+left: 50%;
+width: 60vw;
+transform: translate(-50%,-50%);
+}
+#header .centerline.text-center{
+  --animate-duration: 1.5s;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0.5px 0.5px 7.5px #2c2c2c;
+}
+#header .centerline.text-center::before{
+  content: '';
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: calc(50% - 135px);
+  height: 1px;
+}
+#header .centerline.text-center::after{
+  content: '';
+  background: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: calc(50% - 135px);
+  height: 1px;
+}
+/* 滾動icon */
+#header .scrollDown{
+  position: absolute;
+  bottom:0%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+#header .icon{
+  width: 4.75rem;
+  height: 4.75rem;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg);
+  border: 1.75px solid white;
+  box-shadow: 0.25px 0.25px 5px #000000;
+}
+#header .arrow{
+transform: rotate(-45deg);
+position: relative;
+top: 20%;
+left: 40%;
+}
+#header .fas.fa-arrow-down{
+  text-shadow: 0.5px 0.5px 10px #000000;
+}
+/* icon群組 */
+#header .iconGroup{
+  position: absolute;
+  box-sizing: border-box;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2.5rem;
+  text-shadow: 0.5px 0.5px 10px #202020;
+}
+/* 媒體查詢 */
+@media (min-width: 234px) and (max-width: 432px) {
+  #header .iconGroup{
+    top: 64.5%;
+  }
+}
+@media (min-width: 0px) and (max-width: 233px) {
+  #header .iconGroup{
+    display: none;
+  }
+}
+#header .row{
+  --animate-duration: 1.5s;
+}
+/*controlPoint*/
+.point1{
+  position: absolute;
+  top: 48%;
+  left: 2.5%;
+  cursor: pointer;
+}
+.point2{
+  position: absolute;
+  top: 52%;
+  left: 2.5%;
+  cursor: pointer;
+  opacity: 0.33;
+}
+
+@keyframes opacity {
+  0%{opacity: 0.33;}
+  100%{opacity: 1;}
+}
+@keyframes opacity2 {
+  0%{opacity: 1;}
+  100%{opacity: 0.33;}
+}
+@keyframes opacity3 {
+  0%{transform:scale(1);}
+  100%{transform:scale(1.1);}
+}
+@keyframes opacity4 {
+  0%{opacity: 0;transform:scale(1.1);}
+  100%{opacity: 1;transform:scale(1);}
+}
+
+/* section About */
+
+#About .title{
+  font-family: 'Cinzel', serif;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e0b271;
+  border-top: 3.5px solid #e0b271;
+  border-bottom: 3.5px solid #e0b271;
+  border-left: 2.5px solid #e0b271;
+  border-right: 2.5px solid #e0b271;
+}
+#About .title:before{
+  content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    bottom: 20%;
+    left: calc(50% - 100px);
+}
+#About .title:after{
+  content: '';
+  position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #941a21;
+    bottom: 19%;
+    left: calc(50% - 20px);
+}
+@media (min-width: 0px) and (max-width: 240px) {
+  #About .title{
+    font-size: 2rem;
+  }
+}
+#About .img_container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#About .left_img{
+  background-image: url('../img/Sargent_01.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 83.317px);
+}
+#About .right_content{
+  position: relative;
+  background-color: rgb(217, 225, 219);
+  background-color: rgb(15, 15, 15);
+}
+@keyframes scale2 {
+  0%{transform:scale(1.15);opacity: 0.75;}
+  100%{transform:scale(1);opacity: 1;}
+}
+#About .head_shot{
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  transform-origin: 50% 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  --animate-duration: 4s;
+}
+
+#About .img_background{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40% ,-40%);
+  border: 1px solid rgb(240, 240, 240);
+
+}
+#About .img_background2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  width: 400px;
+  height: 475px;
+  border: 2.5px solid rgb(240, 240, 240);
+}
+@media (min-width: 0px) and (max-width: 535px) {
+  #About .img_background2{
+    display: none;
+  }
+}
+#About .img_text_con{
+  position: absolute; 
+  top: calc(100% - 95%);
+  left: 50%;
+  transform: translateX(-50%); 
+}
+#About .img_text{
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  --animate-duration: 1.5s;
+}
+#About .img_line{
+  position: absolute;
+  transform-origin: 0% 50%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 1.25px;
+  background-color: rgb(255, 255, 255);
+}
+@keyframes line{
+  0%{width:0%}
+  100%{width:100%}
+}
+#About .img_name_con{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  --animate-duration: 1.5s;
+}
+#About .img_name{
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  white-space:nowrap;
+}
+@media (min-width: 0px) and (max-width: 535px) {
+  #About .img_name{
+    font-size: 2.5rem;
+  }
+}
+#About .con{
+  z-index: 100;
+}
+#About .intr{
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+#About .intr_content{
+  font-family: 'Cinzel', serif;  font-size: 2rem;
+  width: 90%;
+  --animate-duration: 2s;
+}
+@media (max-width: 996px) {
+  #About .intr_content{
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 540px) {
+  #About .intr_content{
+    font-size: 1rem;
+  }
+}
+#About .intr_content::first-letter{
+  font-size: 3rem;
+  font-weight: 400;
+}
+#About .icon{
+  --animate-duration: 2s;
+}
+#About .iconGroup2{
+  --animate-duration: 2s;
+}
+#About .fas span{
+  font-weight: 200;
+  font-size: 1rem;
+}
+#About .right_content_line{
+  position: absolute;
+  right: 10%;
+  z-index: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #cfa05e;
+}
+#About .arrow{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  transform: translate(-20%,-20%);
+  cursor: pointer;
+}
+@media(max-width: 1500px) {
+  #About .arrow{
+    width:100px;
+    height: 100px;
+  }
+}
+@media(max-width: 540px) {
+  #About .arrow{
+    width:65px;
+    height: 65px;
+  }
+}
+
+/* section Resume */
+
+#Resume .title{
+  font-family: 'Cinzel', serif;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e0b271;
+  border-top: 3.5px solid #e0b271;
+  border-bottom: 3.5px solid #e0b271;
+  border-left: 2.5px solid #e0b271;
+  border-right: 2.5px solid #e0b271;
+}
+#Resume .title:before{
+  content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    bottom: 20%;
+    left: calc(50% - 100px);
+}
+#Resume .title:after{
+  content: '';
+  position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #941a21;
+    bottom: 19%;
+    left: calc(50% - 20px);
+}
+
+#Resume .container-fluid{
+  height: calc(100vh - 83px);
+  background-color: rgb(33, 46, 34);
+  position: relative;
+}
+#Resume .line{
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  width: 1px;
+  height: 100%;
+  background-color: #e0b271;
+}
+#Resume .content{
+  position: absolute;
+  top: 2.5%;
+  left: 4.75%;
+  width: 42.5%;
+}
+#Resume .con_item{
+  font-family: 'Cinzel', serif;
+  border-bottom: 1px solid #e0b271;
+  height: 65px;
+  font-size: 3.5rem;
+  color: #e0b271;
+}
+#Resume .text{
+  font-size: 1.5rem;
+}
+@media (max-width:991px) {
+  #Resume .content {
+    width: 85%;
+  }
+}
+@media (max-width:576px){
+  #Resume .con_item{
+    font-size: 2.5rem;
+  }
+  #Resume .text{
+    font-size: 1.1rem;
+  }
+}
+#Resume .item{
+  position: absolute;
+  bottom: 15%;
+  left: 4.75%;
+  cursor: pointer;
+}
+#Resume .sort{
+  font-size: 1.25rem;
+  color: #cfa05e;
+  transition: all 1s ease;
+}
+#Resume .sort:hover{
+  color:white;
+}
+#Resume .img_con{
+  position: relative;
+  height: calc(100vh - 83.317px);
+  overflow: hidden;
+}
+#Resume .img{
+  background-image: url('../img/Sargent_02.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#Resume .img_intr{
+  position:absolute;
+  bottom: 0%;
+  right: 0%;
+  color: white;
+  --animate-duration: 1.5s;
+}
+#Resume .mess_con{
+  height: 75px;
+}
+#Resume .year{
+  font-family: 'Cinzel', serif;
+  font-size: 4.5rem;
+}
+#Resume .article{
+  font-size: 1.25rem;
+}
+#Resume .name{
+  font-family: 'Cinzel', serif;
+  font-size: 2.1rem;
+}
+@media (max-width:1200px){
+  #Resume .name{
+    font-size: 1.25rem;
+  }
+}
+@keyframes opacity5{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes opacity6{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+/* section skills */
+#Skills .title{
+  font-family: 'Cinzel', serif;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e0b271;
+  border-top: 3.5px solid #e0b271;
+  border-bottom: 3.5px solid #e0b271;
+  border-left: 2.5px solid #e0b271;
+  border-right: 2.5px solid #e0b271;
+}
+#Skills .title:before{
+  content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    bottom: 20%;
+    left: calc(50% - 100px);
+}
+#Skills .title:after{
+  content: '';
+  position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #941a21;
+    bottom: 19%;
+    left: calc(50% - 20px);
+}
+#Skills .item{
+  height: auto;
+
+}
+#Skills .img{
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+#Skills .text{
+  font-size: 0.5rem;
+  height: 100%;
+}
+@media (max-width:768px){
+  #Skills .text{
+    display: none;
+  }
+}
+
+/* section Portfolio */
+
+#Portfolio .title{
+  font-family: 'Cinzel', serif;
+  position: relative;
+  font-size: 2.5rem;
+  color: #e0b271;
+  border-top: 3.5px solid #e0b271;
+  border-bottom: 3.5px solid #e0b271;
+  border-left: 2.5px solid #e0b271;
+  border-right: 2.5px solid #e0b271;
+}
+#Portfolio .title:before{
+  content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #ddd;
+    bottom: 20%;
+    left: calc(50% - 100px);
+}
+#Portfolio .title:after{
+  content: '';
+  position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #941a21;
+    bottom: 19%;
+    left: calc(50% - 20px);
+}

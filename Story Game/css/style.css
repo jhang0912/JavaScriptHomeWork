@@ -1,0 +1,19 @@
+div#background{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.uk-background-cover.uk-background-top-center.uk-background-norepeat.vw-100.vh-100{
+  background-image: url("../img/background/02.jpg");
+  animation: scale 5s ease-out 1 forwards ;
+}
+@keyframes scale {
+  0%{transform:scale(1.1) ;}
+  100%{transform:scale(1);}
+}
+.swal2-popup.swal2-modal.swal2-show{
+background-image: url("../img/special_dlc.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+}

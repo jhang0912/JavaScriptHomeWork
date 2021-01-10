@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>CSS Color Selector</title>
+  </head>
+  <body onload="random()">
+    <div class="container col-4 border border-dark rounded mt-4">
+      <div id="div1" class="mt-3 mb-3 border border-dark col-12 rounded w-100 d-flex justify-content-center align-items-center" style="height: 15rem; margin: 0 auto;">
+        <div class="h2" id="hex"></div>
+      </div>
+      
+      <!-- 按鈕群組 -->
+      <div class="d-flex justify-content-center mb-2 col-12 border border-dark rounded p-0">
+        <div class="col-4 border-right border-dark">
+          <div class="h5 text-center text-danger mt-2 mb-0">R</div>
+          <div class="h4 font-weight-bold text-center text-danger " id="R"></div>
+          <input class="form-control-range mb-2" type="range" min="0" max="255" id="rr" oninput="new_range()">
+        </div>
+
+        <div class="col-4 border-right border-dark">
+          <div class="h5 text-center text-success mt-2 mb-0">G</div>
+          <div class="h4 font-weight-bold text-center text-success" id="G"></div>
+          <input class="form-control-range" type="range" min="0" max="255" id="gr" oninput="new_range()">
+        </div>
+
+        <div class="col-4">
+          <div class="h5 text-center text-primary mt-2 mb-0">B</div>
+          <div class="h4 font-weight-bold text-center text-primary" id="B"></div>
+          <input class="form-control-range" type="range" min="0" max="255" id="br" oninput="new_range()">
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-center btn-group btn-group-lg container mt-3 mb-3 p-0">
+        <input type="button" value="R" id="color1" onclick="color('R')" class="btn btn-danger btn-lg">
+        <input type="button" value="G" id="color2" onclick="color('G')" class="btn btn-success btn-lg">
+        <input type="button" value="B" id="color3" onclick="color('B')" class="btn btn-primary btn-lg">
+        <input type="button" value="+" id="" onclick="count('+')" class="btn btn-outline-danger btn-lg">
+        <input type="button" value="-" id="" onclick="count('-')" class="btn btn-outline-success btn-lg">
+        <input type="button" value="?" id="" onclick="random()" class="btn btn-outline-primary btn-lg">
+      </div>
+    </div>
+
+  <script>
+      // 宣告物件R,G,B
+      var RGB={R:0,G:0,B:0};
+      // 隨機產生背景顏色
+      function random(){
+        RGB.R=Math.floor(Math.random()*256);
+        RGB.G=Math.floor(Math.random()*256);
+        RGB.B=Math.floor(Math.random()*256);
+        output();
+      };
+
+      // 滑桿
+      function new_range(){
+        RGB.R=document.getElementById("rr").value;
+        RGB.G=document.getElementById("gr").value;
+        RGB.B=document.getElementById("br").value;
+        output();
+      }
+
+      //range
+      function range(){
+        document.getElementById("rr").value=RGB.R;
+        document.getElementById("gr").value=RGB.G;
+        document.getElementById("br").value=RGB.B;
+        document.getElementById("div1").style.backgroundColor="rgb("+RGB.R+","+RGB.G+","+RGB.B+")";
+      }
+      // RGB按鈕
+      function color(col){
+        var c = window.prompt("請輸入數字0~255",RGB[col]);
+        if(c > 255 || c < 0){
+          color(col);
+        }else if(c===null){
+          output()
+        }else if(c <= 255 && c >= 0){
+          RGB[col]=c;
+          output()
+        }else{
+          color(col);
+        }
+      }
+
+      // +-按鈕
+      function count(cou){
+        for(var p in RGB){
+          // console.log(RGB[p]);
+          switch(cou){
+            case "+":
+              if(RGB[p] < 255){
+              RGB[p]++;
+              }
+            break;
+            case "-":
+              if(RGB[p] > 0){
+              RGB[p]--;
+              }
+            break;
+          }
+        }
+        output()
+      }
+      // 輸出顏色
+      function output(){
+        document.getElementById("div1").style.backgroundColor="rgb("+RGB.R+","+RGB.G+","+RGB.B+")";
+        document.getElementById("R").textContent=RGB.R;
+        document.getElementById("G").textContent=RGB.G;
+        document.getElementById("B").textContent=RGB.B;
+        range()
+        Hex()
+      }
+      // 轉換16進位
+      function Hex(){
+        var newColor=[];
+        var sixteen=['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+        for(var p in RGB){
+          var new_color;
+          var hex =[];
+          var num = RGB[p];
+          while(num > 0){
+          var j = Math.floor((num/16));
+          var k = Math.floor((num%16));
+          num = j ;
+          hex.unshift(sixteen[k]);
+          }
+          new_color=hex.join('')
+          if(new_color.length === 1){
+            new_color='0'+new_color;
+          }else if(new_color.length === 0){ 
+            new_color='00';
+          }
+          newColor.push(new_color);
+        }
+        // console.log(newColor);
+        document.getElementById("hex").textContent="#"+newColor[0]+newColor[1]+newColor[2];
+        // 轉換文字顏色
+        var text_color = [];
+        for(var p in RGB){
+          text_color.push(255-RGB[p]);
+        }
+        // console.log(RGB);
+        // console.log(text_color);
+        document.getElementById("hex").style.color="rgb("+text_color[0]+","+text_color[1]+","+text_color[2]+")";
+      }
+    </script>    
+    <div id="base">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

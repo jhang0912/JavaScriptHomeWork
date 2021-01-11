@@ -1,4 +1,3 @@
-/* -----全域----- */
 *{
   font-family: 'Kanit', sans-serif;
   letter-spacing: 0.1rem;
@@ -12,7 +11,6 @@
   position: relative;
   overflow: hidden;
 }
-/* -----標題----- */
 #header .col-sm-12.col-md-1.col-lg-1.col-xl-1.border.border-white.mb-0.text-center.navbar-text.h1{
   font-family: 'Cinzel', serif;
   letter-spacing: 0;
@@ -45,7 +43,6 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   0%{width: 75%;opacity: 1;}
   100%{width: 0px;}
   }
-/* 隱藏列表 */
 #header .col-12.d-flex.align-items-center.justify-content-center{
   height: 3rem;
 }
@@ -56,7 +53,6 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   position: absolute;
   top: 17%;
 }
-/* 背景圖 */
 #header .main_img.vh-100{
   background-position: center;
   background-size: cover;
@@ -65,13 +61,11 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   width: 100%;
   height: 100%;
 }
-/* 背景圖縮放動畫 */
 @keyframes scale {
   0%{transform:scale(1.1) ;}
   100%{transform:scale(1);}
 }
 
-/* 中央文字-1 */
 #header h1.centerText{
   position: absolute;
   top: 45%;
@@ -92,13 +86,10 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   opacity: 0;
   text-shadow: 0.5px 0.5px 10px #000000;
   }
-/* 中央文字動畫 */
 @keyframes aText {
   0%{opacity: 0;}
   100%{opacity: 1;}
 }
-
-/* 中央文字-2 */
 #header .h2.text-white{
 position: absolute;
 top:57%;
@@ -129,7 +120,6 @@ transform: translate(-50%,-50%);
   width: calc(50% - 135px);
   height: 1px;
 }
-/* 滾動icon */
 #header .scrollDown{
   position: absolute;
   bottom:0%;
@@ -154,7 +144,6 @@ left: 40%;
 #header .fas.fa-arrow-down{
   text-shadow: 0.5px 0.5px 10px #000000;
 }
-/* icon群組 */
 #header .iconGroup{
   position: absolute;
   box-sizing: border-box;
@@ -164,7 +153,6 @@ left: 40%;
   font-size: 2.5rem;
   text-shadow: 0.5px 0.5px 10px #202020;
 }
-/* 媒體查詢 */
 @media (min-width: 234px) and (max-width: 432px) {
   #header .iconGroup{
     top: 64.5%;
@@ -178,7 +166,6 @@ left: 40%;
 #header .row{
   --animate-duration: 1.5s;
 }
-/*controlPoint*/
 .point1{
   position: absolute;
   top: 48%;
@@ -381,6 +368,14 @@ left: 40%;
   font-weight: 200;
   font-size: 1rem;
 }
+#About .right_content_line_con{
+  position: absolute;
+  right: 10%;
+  z-index: 0;
+  width: 1px;
+  height: 100%;
+  overflow: hidden;
+}
 #About .right_content_line{
   position: absolute;
   right: 10%;
@@ -388,6 +383,7 @@ left: 40%;
   width: 1px;
   height: 100%;
   background-color: #cfa05e;
+  --animate-duration:2.5s;
 }
 #About .arrow{
   width: 100px;
@@ -449,6 +445,14 @@ left: 40%;
   background-color: rgb(33, 46, 34);
   position: relative;
 }
+#Resume .line_con{
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  width: 1px;
+  height: 100%;
+  overflow: hidden;
+}
 #Resume .line{
   position: absolute;
   top: 0%;
@@ -456,6 +460,7 @@ left: 40%;
   width: 1px;
   height: 100%;
   background-color: #e0b271;
+  --animate-duration: 3s;
 }
 #Resume .content{
   position: absolute;
@@ -584,7 +589,7 @@ left: 40%;
 
 }
 #Skills .img{
-  height: 100px;
+  height: 80px;
   margin-bottom: 1.5rem;
 }
 #Skills .text{

@@ -383,7 +383,7 @@ left: 40%;
   width: 1px;
   height: 100%;
   background-color: #cfa05e;
-  --animate-duration:2.5s;
+  --animate-duration:3s;
 }
 #About .arrow{
   width: 100px;
@@ -584,6 +584,12 @@ left: 40%;
     bottom: 19%;
     left: calc(50% - 20px);
 }
+#Skills #Carousel{
+  /* background: url('../img/main_03.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
 #Skills .item{
   height: auto;
 
@@ -592,9 +598,14 @@ left: 40%;
   height: 80px;
   margin-bottom: 1.5rem;
 }
+
+
 #Skills .text{
   font-size: 0.5rem;
   height: 100%;
+  /* color: white; */
+  /* text-shadow: 0.5px 0.5px 10px #000000; */
+
 }
 @media (max-width:768px){
   #Skills .text{
@@ -633,4 +644,95 @@ left: 40%;
     background: #941a21;
     bottom: 19%;
     left: calc(50% - 20px);
+}
+#Portfolio .container-fluid{
+  height: calc(100vh - 83px);
+  background-color: rgb(20, 27, 46);
+  position: relative;
+  
+}
+#Portfolio .left_one{
+  background-image: url('../img/Sargent_03.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  width: 100%;
+  height: 100%;
+}
+#Portfolio .left_two{
+  height: 854px;
+}
+#Portfolio .right_one{
+  height: 854px;
+}
+#Portfolio .right_two{
+  height: 854px;
+}
+#Portfolio .img_intr{
+  position:absolute;
+  top: 0%;
+  left: 0%;
+  color: white;
+  writing-mode: vertical-rl 
+}
+#Portfolio .mess_con{
+  width: 75px;
+}
+#Portfolio .year{
+  font-family: 'Cinzel', serif;
+  font-size: 4.5rem;
+}
+#Portfolio .article{
+  font-size: 1.25rem;
+}
+#Portfolio .name{
+  font-family: 'Cinzel', serif;
+  font-size: 2.1rem;
+}
+#Portfolio .line_one{
+  width: 1px;
+  height: 100%;
+  background-color: #cfa05e;
+  position: absolute;
+  left: 25%;
+}
+#Portfolio .line_two{
+  width: 1px;
+  height: 100%;
+  background-color: #cfa05e;
+  position: absolute;
+  left: 50%;
+}
+#Portfolio .line_three{
+  width: 1px;
+  height: 100%;
+  background-color: #cfa05e;
+  position: absolute;
+  left: 75%;
+}
+#Portfolio .title_one{
+  font-family: 'Cinzel', serif;
+  color: #cfa05e;
+  font-size: 2rem;
+}
+#Portfolio .title_one::first-letter{
+  font-size: 3rem;
+}
+#Portfolio .text_one{
+  border-width: 50%;
+  font-size: 1rem;
+}
+#Portfolio img{
+  width: 60%;
+  border: 1.25px solid #cfa05e;
+  margin: 0 auto;
+}
+#Portfolio .num{
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #cfa05e;
+  position: absolute;
+  bottom: 0%;
+  left: 8%;
 }

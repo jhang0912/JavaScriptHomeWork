@@ -26,12 +26,12 @@ $('.nav-item').on('click',function(e){
     case 'resume':
       $('html,body').animate({scrollTop:target},2000);
       break;
-    case 'skills':
-      $('html,body').animate({scrollTop:target},2500);
-      break;
-    case 'portfolio':
-      $('html,body').animate({scrollTop:target},3000);
-      break;
+      case 'portfolio':
+        $('html,body').animate({scrollTop:target},2500);
+        break;
+        case 'skills':
+          $('html,body').animate({scrollTop:target},3000);
+          break;
   }
 })
 
@@ -53,12 +53,12 @@ $('#list .col-12.d-flex').on('click',function(e){
     case 'resume2':
       $('html,body').animate({scrollTop:target},2000);
       break;
-    case 'skills2':
-      $('html,body').animate({scrollTop:target},2500);
-      break;
-    case 'portfolio':
-      $('html,body').animate({scrollTop:target},3000);
-      break;
+      case 'portfolio':
+        $('html,body').animate({scrollTop:target},2500);
+        break;
+        case 'skills2':
+          $('html,body').animate({scrollTop:target},3000);
+          break;
   }
 })
 
@@ -95,6 +95,59 @@ $(document).ready(function(){
         }
       }
     ]
+  });
+  $('#Portfolio .left_two_container').slick({
+    arrows:false,
+    dot: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    adaptiveHeight:true,
+    speed:1500,
+    adaptiveHeight:true,
+    vertical:true,
+    verticalSwiping:true,
+    draggable:false,
+    // pauseOnFocus:false,
+    // pauseOnHover:false,
+  });
+
+  $('#Portfolio .right_one_container').slick({
+    arrows:false,
+    dot: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4150,
+    adaptiveHeight:true,
+    speed:1350,
+    adaptiveHeight:true,
+    vertical:true,
+    verticalSwiping:true,
+    draggable:false,
+    // pauseOnFocus:false,
+    // pauseOnHover:false,
+  });
+
+  $('#Portfolio .right_two_container').slick({
+    arrows:false,
+    dot: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4300,
+    adaptiveHeight:true,
+    speed:1200,
+    adaptiveHeight:true,
+    vertical:true,
+    verticalSwiping:true,
+    draggable:false,
+    // pauseOnFocus:false,
+    // pauseOnHover:false,
   });
 
   var aText = {

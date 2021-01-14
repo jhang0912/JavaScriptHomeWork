@@ -18,7 +18,7 @@ $('.nav-item').on('click',function(e){
   };
   let Id = this.id;
   let target = $('#'+scrollY[Id]).offset().top;
-  console.log(target);
+  // console.log(target);
   switch(Id){
     case 'about':
       $('html,body').animate({scrollTop:target},1500);
@@ -30,7 +30,7 @@ $('.nav-item').on('click',function(e){
         $('html,body').animate({scrollTop:target},2500);
         break;
         case 'skills':
-          $('html,body').animate({scrollTop:target},3000);
+          $('html,body').animate({scrollTop:(document.body.clientHeight-937)},2700);
           break;
   }
 })
@@ -40,11 +40,11 @@ $('#list .col-12.d-flex').on('click',function(e){
     about2:'About',
     resume2:'Resume',
     skills2:'Skills',
-    portfolio2:'Portfolio'
+    portfolio2:'Portfolio2'
   };
   let Id = this.id;
   let target = $('#'+scrollY[Id]).offset().top;
-  console.log(target);
+  // console.log(target);
 
   switch(Id){
     case 'about2':
@@ -53,11 +53,11 @@ $('#list .col-12.d-flex').on('click',function(e){
     case 'resume2':
       $('html,body').animate({scrollTop:target},2000);
       break;
-      case 'portfolio':
+      case 'portfolio2':
         $('html,body').animate({scrollTop:target},2500);
         break;
         case 'skills2':
-          $('html,body').animate({scrollTop:target},3000);
+          $('html,body').animate({scrollTop:(document.body.clientHeight-812)},3000);
           break;
   }
 })
@@ -73,6 +73,8 @@ $('.nav-item').on('mouseout',function(){
 })
 
 $(document).ready(function(){
+
+  
 
   $('#Carousel').slick({
     arrows:false,
@@ -104,14 +106,13 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    adaptiveHeight:true,
     speed:1500,
     adaptiveHeight:true,
     vertical:true,
     verticalSwiping:true,
     draggable:false,
-    // pauseOnFocus:false,
-    // pauseOnHover:false,
+    pauseOnFocus:false,
+    pauseOnHover:false,
   });
 
   $('#Portfolio .right_one_container').slick({
@@ -121,15 +122,14 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4150,
+    autoplaySpeed: 4000,
     adaptiveHeight:true,
-    speed:1350,
-    adaptiveHeight:true,
+    speed:1500,
     vertical:true,
     verticalSwiping:true,
     draggable:false,
-    // pauseOnFocus:false,
-    // pauseOnHover:false,
+    pauseOnFocus:false,
+    pauseOnHover:false,
   });
 
   $('#Portfolio .right_two_container').slick({
@@ -139,16 +139,17 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4300,
+    autoplaySpeed: 4000,
     adaptiveHeight:true,
-    speed:1200,
-    adaptiveHeight:true,
+    speed:1500,
     vertical:true,
     verticalSwiping:true,
     draggable:false,
-    // pauseOnFocus:false,
-    // pauseOnHover:false,
-  });
+    pauseOnFocus:false,
+    pauseOnHover:false,
+  }); 
+
+
 
   var aText = {
     aText:'0s',
@@ -209,7 +210,7 @@ $('.controlPoint').on('click',function(e){
 
 window.addEventListener('scroll',function(){
   var y = this.scrollY;
-  console.log(y);
+  // console.log(y);
   if(y >= 90){
     $('.img_line').css({'animation':'line 2s ease 1 forwards'})
     $('.left_img').css({
@@ -217,13 +218,14 @@ window.addEventListener('scroll',function(){
     })
   }
 
-  if(y >=940){
+  if(y >= 940){
     $('#Resume .img').css({'animation':'opacity3 5.5s ease-out 1 forwards'})
   }
-  
-  let skills_y = $('#Resume').scrollY;
-  if( y >= skills_y){
-    
+
+  if(y >= 1958){
+    $('#Portfolio .left_one').css({
+      'animation':'scale 5.5s ease-out 1 forwards'
+    })
   }
   
 })

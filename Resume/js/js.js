@@ -1,14 +1,14 @@
 new WOW().init();
-// section header
 
-var mate = {
-  about:'line1',
-  resume:'line2',
-  skills:'line3',
-  portfolio:'line4',
-  contacts:'line5'
-};
-
+// 導覽列卷軸滾動
+let Height =[
+  '40px',
+  '80px',
+  '120px',
+  '160px',
+  '200px'
+]
+let position = 0;
 $('.nav-item').on('click',function(e){
   let scrollY ={
     about:'About',
@@ -21,19 +21,28 @@ $('.nav-item').on('click',function(e){
   // console.log(target);
   switch(Id){
     case 'about':
+      position = 1;
       $('html,body').animate({scrollTop:target},1500);
+      $(".position").animate({height:Height[position]},1500)
       break;
     case 'resume':
+      position = 2;
       $('html,body').animate({scrollTop:target},2000);
+      $(".position").animate({height:Height[position]},2000)
       break;
       case 'portfolio':
-        $('html,body').animate({scrollTop:target},2500);
-        break;
-        case 'skills':
-          $('html,body').animate({scrollTop:(document.body.clientHeight-937)},2700);
-          break;
+      position = 3;
+      $('html,body').animate({scrollTop:target},2500);
+      $(".position").animate({height:Height[position]},2500)
+      break;
+      case 'skills':
+      position = 4;
+      $('html,body').animate({scrollTop:(document.body.clientHeight-937)},2700);
+      $(".position").animate({height:Height[position]},2700)
+      break;
   }
 })
+
 
 $('#list .col-12.d-flex').on('click',function(e){
   let scrollY ={
@@ -48,20 +57,81 @@ $('#list .col-12.d-flex').on('click',function(e){
 
   switch(Id){
     case 'about2':
+      position = 1;
       $('html,body').animate({scrollTop:target},1500);
+      $(".position").animate({height:Height[position]},1500)
       break;
     case 'resume2':
+      position = 2;
       $('html,body').animate({scrollTop:target},2000);
+      $(".position").animate({height:Height[position]},2000)
       break;
       case 'portfolio2':
+        position = 3;
         $('html,body').animate({scrollTop:target},2500);
+        $(".position").animate({height:Height[position]},2500)
         break;
         case 'skills2':
-          $('html,body').animate({scrollTop:(document.body.clientHeight-812)},3000);
-          break;
+          position = 4;
+        $('html,body').animate({scrollTop:(document.body.clientHeight-812)},3000);
+        $(".position").animate({height:Height[position]},3000)
+        break;
   }
 })
 
+
+/*滑鼠滾輪監聽事件*/
+let sectionY = [
+  '#header',
+  '#About',
+  '#Resume',
+  '#Portfolio',
+  '#Skills'
+]
+
+$(window).on('mousewheel', function(e){
+  $('html,body').stop();
+  let Y = e.deltaY;
+
+  if(Y > 0){/*滑鼠上捲 */
+    position--;
+    if(position < 0){
+      position++;
+    }
+  }else{/*滑鼠下捲 */
+    position++;
+    if(position > 4){
+      position--;
+    }
+  }
+
+  if(position === 3){
+    if($('#Portfolio').offset().top === 0){
+      $('html,body').animate({scrollTop:$('#Portfolio2').offset().top},1500);
+      $(".position").animate({height:Height[position]},1250)
+      return;
+    }
+  }
+
+  if(position === 4){
+      $('html,body').animate({scrollTop:document.body.clientHeight-window.innerHeight},1000);
+      $(".position").animate({height:Height[position]},1250)
+      return;
+    }
+  
+
+  let target = $(sectionY[position]).offset().top;
+  $('html,body').animate({scrollTop:target},1500);
+  $(".position").animate({height:Height[position]},1250)
+});
+
+var mate = {
+  about:'line1',
+  resume:'line2',
+  skills:'line3',
+  portfolio:'line4',
+  contacts:'line5'
+};
 $('.nav-item').on('mouseover',function(){
   var target = this.id;
   document.getElementById(mate[target]).style.animation="line 0.75s ease-in-out 1 forwards";
@@ -104,7 +174,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     speed:1500,
     adaptiveHeight:true,
@@ -121,7 +191,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     adaptiveHeight:true,
     speed:1500,
@@ -138,7 +208,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     adaptiveHeight:true,
     speed:1500,
@@ -180,6 +250,7 @@ $(document).ready(function(){
   $('#item_ed').siblings('span').css({'display':'none'});
   $('#ed_text').siblings('div').css({'display':'none'});
   
+  $('.position').css('height','40');
 })
 // 向下按鈕
 $('.scrollDown').on('click',function(){
@@ -211,6 +282,8 @@ $('.controlPoint').on('click',function(e){
 window.addEventListener('scroll',function(){
   var y = this.scrollY;
   // console.log(y);
+
+  
   if(y >= 90){
     $('.img_line').css({'animation':'line 2s ease 1 forwards'})
     $('.left_img').css({
@@ -227,6 +300,9 @@ window.addEventListener('scroll',function(){
       'animation':'scale 5.5s ease-out 1 forwards'
     })
   }
+
+  
+
   
 })
 

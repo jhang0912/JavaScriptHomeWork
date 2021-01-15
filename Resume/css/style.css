@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
 }
+body{
+  overflow: hidden;
+}
 /* section header */
 #header{
   width: 100vw;
@@ -185,6 +188,39 @@ left: 40%;
   opacity: 0.33;
 }
 
+.position_con{
+  position: fixed;
+  top: 50%;
+  right: 2.5%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 2px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.33);
+}
+.position{
+  position: relative;
+  top:0;
+  z-index: 101;
+  width: 2px;
+  background-color: white;
+  opacity: 1;
+}
+#header .num{
+  position: absolute;
+  right: -180%;
+  top: -20%;
+  font-size: 1.5rem;
+  z-index: 102;
+}
+#header .Num{
+  position: absolute;
+  right: -400%;
+  bottom: -20%;
+  font-size: 1.5rem;
+  z-index: 102;
+}
+
 @keyframes opacity {
   0%{opacity: 0.33;}
   100%{opacity: 1;}
@@ -201,7 +237,6 @@ left: 40%;
   0%{opacity: 0;transform:scale(1.1);}
   100%{opacity: 1;transform:scale(1);}
 }
-
 /* section About */
 
 #About .title{
@@ -591,6 +626,7 @@ left: 40%;
 }
 #Skills .item{
   height: auto;
+  outline: none;
 }
 #Skills .img{
   height: 80px;

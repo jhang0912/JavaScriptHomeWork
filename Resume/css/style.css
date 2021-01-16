@@ -698,13 +698,13 @@ left: 40%;
   height: 100%;
 }
 #Portfolio .left_two{
-  height: 854px;
+  height: calc(100vh - 83px);
 }
 #Portfolio .right_one{
-  height: 854px;
+  height: calc(100vh - 83px);
 }
 #Portfolio .right_two{
-  height: 854px;
+  height: calc(100vh - 83px);
 }
 #Portfolio .img_intr{
   position:absolute;

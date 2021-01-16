@@ -24,21 +24,25 @@ $('.nav-item').on('click',function(e){
       position = 1;
       $('html,body').animate({scrollTop:target},1500);
       $(".position").animate({height:Height[position]},1500)
+      $('#header .num').text(position+1);
       break;
     case 'resume':
       position = 2;
       $('html,body').animate({scrollTop:target},2000);
       $(".position").animate({height:Height[position]},2000)
+      $('#header .num').text(position+1);
       break;
       case 'portfolio':
       position = 3;
       $('html,body').animate({scrollTop:target},2500);
       $(".position").animate({height:Height[position]},2500)
+      $('#header .num').text(position+1);
       break;
       case 'skills':
       position = 4;
       $('html,body').animate({scrollTop:(document.body.clientHeight-937)},2700);
       $(".position").animate({height:Height[position]},2700)
+      $('#header .num').text(position+1);
       break;
   }
 })
@@ -60,21 +64,25 @@ $('#list .col-12.d-flex').on('click',function(e){
       position = 1;
       $('html,body').animate({scrollTop:target},1500);
       $(".position").animate({height:Height[position]},1500)
+      $('#header .num').text(position+1);
       break;
     case 'resume2':
       position = 2;
       $('html,body').animate({scrollTop:target},2000);
       $(".position").animate({height:Height[position]},2000)
+      $('#header .num').text(position+1);
       break;
       case 'portfolio2':
         position = 3;
         $('html,body').animate({scrollTop:target},2500);
         $(".position").animate({height:Height[position]},2500)
+        $('#header .num').text(position+1);
         break;
         case 'skills2':
           position = 4;
         $('html,body').animate({scrollTop:(document.body.clientHeight-812)},3000);
         $(".position").animate({height:Height[position]},3000)
+        $('#header .num').text(position+1);
         break;
   }
 })
@@ -108,21 +116,24 @@ $(window).on('mousewheel', function(e){
   if(position === 3){
     if($('#Portfolio').offset().top === 0){
       $('html,body').animate({scrollTop:$('#Portfolio2').offset().top},1500);
-      $(".position").animate({height:Height[position]},1250)
+      $(".position").animate({height:Height[position]},1250);
+      $('#header .num').text(position+1);
       return;
     }
   }
 
   if(position === 4){
       $('html,body').animate({scrollTop:document.body.clientHeight-window.innerHeight},1000);
-      $(".position").animate({height:Height[position]},1250)
+      $(".position").animate({height:Height[position]},1250);
+      $('#header .num').text(position+1);
       return;
     }
   
 
   let target = $(sectionY[position]).offset().top;
   $('html,body').animate({scrollTop:target},1500);
-  $(".position").animate({height:Height[position]},1250)
+  $(".position").animate({height:Height[position]},1250);
+  $('#header .num').text(position+1);
 });
 
 var mate = {
@@ -174,7 +185,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     speed:1500,
     adaptiveHeight:true,
@@ -191,7 +202,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     adaptiveHeight:true,
     speed:1500,
@@ -208,7 +219,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     adaptiveHeight:true,
     speed:1500,
@@ -251,12 +262,17 @@ $(document).ready(function(){
   $('#ed_text').siblings('div').css({'display':'none'});
   
   $('.position').css('height','40');
+
+  $('#header .num').text('1');
+
 })
 // 向下按鈕
 $('.scrollDown').on('click',function(){
   var target_top = $('#About').offset().top;
-  // console.log(target_top)
+  position = 1;
   $('html,body').animate({scrollTop:target_top},1500);
+  $(".position").animate({height:Height[position]},1500)
+  $('#header .num').text(position+1);
 })
 
 var mainImg={

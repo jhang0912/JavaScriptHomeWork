@@ -208,14 +208,15 @@ left: 40%;
 }
 #header .num{
   position: absolute;
-  right: -180%;
+  left: -580%;
   top: -20%;
+  width: 25px;
   font-size: 1.5rem;
   z-index: 102;
 }
 #header .Num{
   position: absolute;
-  right: -400%;
+  right: -350%;
   bottom: -20%;
   font-size: 1.5rem;
   z-index: 102;
@@ -291,7 +292,7 @@ left: 40%;
 }
 #About .right_content{
   position: relative;
-  background-color: rgb(217, 225, 219);
+  height: calc(100vh - 83.317px);
   background-color: rgb(15, 15, 15);
 }
 @keyframes scale2 {
@@ -888,6 +889,11 @@ left: 40%;
 }
 #Portfolio2 .text_one{
   font-size: 1rem;
+}
+@media (max-width:576px){
+  #Portfolio2 .title_one{
+    font-size: 1rem;
+  }
 }
 @media (max-width:576px){
   #Portfolio2 .text_one{

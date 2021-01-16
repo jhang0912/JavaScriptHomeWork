@@ -1,0 +1,56 @@
+*{
+  font-family: 'Cinzel', serif;
+  color: #141b2e;
+}
+#Login{
+  background-image: url('../img/login.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+#Login .con{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  height:60%;
+  background-color: white;
+}
+#Login .title{
+  font-family: 'Cinzel', serif;
+  background-color: #141b2e;
+  position: relative;
+  font-size: 2rem;
+  color: #e0b271;
+}
+#Login .title::first-letter{
+  font-size: 2.75rem;
+}
+
+#Login .form_con{
+  margin: 0 auto;
+}
+#Login .form-label{
+  font-size:1.5rem ;
+}
+#Login .form-label::first-letter{
+  font-size: 2rem;
+}
+#Login .form-control{
+  font-size:1rem ;
+}
+#Login input{
+  border: 1px solid #141b2e;
+}
+#Login .submit{
+  margin-top: 2rem;
+}
+#Login .sub_button{
+  border: 1px solid #141b2e;
+  color: #e0b271;
+  background-color: #141b2e;
+}
+

@@ -30,12 +30,12 @@
         <div class="title col-12 text-center">welcome</div>
         <div class="form_con container-fluid d-flex flex-wrap justify-content-center align-item-center p-4">
           <div class="account container mb-4">
-            <label for="exampleFormControlInput1" class="form-label m-0">Account</label>
+            <label for="account" class="form-label m-0">Account</label>
             <input type="email" class="form-control" id="account" placeholder="">
           </div>
 
           <div class="password container mb-4">
-            <label for="exampleFormControlInput1" class="form-label m-0">Password</label>
+            <label for="password" class="form-label m-0">Password</label>
             <input type="email" class="form-control" id="password" placeholder="">
           </div>
           <div class="submit container">

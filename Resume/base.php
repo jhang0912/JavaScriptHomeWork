@@ -2,10 +2,13 @@
 date_default_timezone_set('asia/taipei');
 session_start();
 
+$About=new DB('Resume_about');
+
 class DB{
 
   protected $table;
   protected $dsn="mysql:host=localhost;dbname=s1090408;charset=utf8";
+
   protected $pdo;
 
   function __construct($table)

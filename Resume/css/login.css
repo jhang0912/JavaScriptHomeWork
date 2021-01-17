@@ -41,6 +41,7 @@
 }
 #Login .form-control{
   font-size:1rem ;
+  font-family: 'Kanit', sans-serif;
 }
 #Login input{
   border: 1px solid #141b2e;
@@ -53,4 +54,5 @@
   color: #e0b271;
   background-color: #141b2e;
 }
+
 

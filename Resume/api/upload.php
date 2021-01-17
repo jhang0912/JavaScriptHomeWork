@@ -23,4 +23,4 @@ echo "</pre>";
 
 $db->save($data);
 
-to("../admin.php?do=$table");
+to("../admin_jhang_128699083.php?do=$table");

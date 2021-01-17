@@ -13,7 +13,7 @@
 </head>
 <body>
   <section id="Navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark vw-100">
       <div class="container-fluid">
         <div class="navbar-brand">Admin Awesome</div>
 

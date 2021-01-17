@@ -2,7 +2,7 @@
 $table=$_GET['table'];
 $id=$_GET['id'];
 ?>
-<div class="add_img_con container rounded border shadow-sm col-3 h-50 mt-3 p-0">
+<div class="add_img_con container rounded border shadow-sm col-3 h-50 mt-3 mb-3 p-0">
   <div class="add_img bg-dark rounded-top text-white text-center h2 p-3">圖片更新</div>
 
   <form class="p-3" action="./api/upload.php" method="post" enctype="multipart/form-data">

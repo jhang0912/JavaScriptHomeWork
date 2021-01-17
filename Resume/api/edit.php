@@ -23,17 +23,15 @@ foreach($_POST['id'] as $key => $id){
         $data['github']=$_POST['github'][$key];
         $data['artstation']=$_POST['artstation'][$key];
         $data['display']=(in_array($id,$_POST['display']))?1:0;
-      case "Resume_Introduction":
-
-        break;
-      case "Resume_resume":
-
-        break;
       case "Resume_portfolio":
-
+        $data['name']=$_POST['name'][$key];
+        $data['text']=$_POST['text'][$key];
+        $data['href']=$_POST['href'][$key];
+        $data['display']=$_POST['display'][$key];
         break;
-        default:
-
+      default:
+        $data['text']=$_POST['text'][$key];
+        $data['display']=(in_array($id,$_POST['display']))?1:0;
         break;
     }
     echo "<pre>";

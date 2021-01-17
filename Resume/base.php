@@ -2,7 +2,13 @@
 date_default_timezone_set('asia/taipei');
 session_start();
 
+$Admin=new DB('Resume_admin');
 $About=new DB('Resume_about');
+$Introduction=new DB('Resume_introduction');
+$Education=new DB('Resume_education');
+$Work_experience=new DB('Resume_work_experience');
+$Personal_development=new DB('Resume_personal_development');
+$Portfolio=new DB('Resume_portfolio');
 
 class DB{
 

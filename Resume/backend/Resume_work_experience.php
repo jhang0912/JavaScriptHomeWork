@@ -3,16 +3,16 @@
     <table class="table">
       <thead>
         <tr class="bg-dark text-white">
-          <th scope="col" class="start text-center">介紹引文</th>
+          <th scope="col" class="start text-center">工作經歷</th>
           <th scope="col" class="text-center">顯示</th>
           <th scope="col" class="end text-center">刪除</th>
         </tr>
       </thead>
       <tbody>
         <?php
-      $introduction=$Introduction->all();
+      $work_experience=$Work_experience->all();
       $table=$_GET['do'];
-      foreach($introduction as $key => $value){
+      foreach($work_experience as $key => $value){
       ?>
         <tr>
           <td class="text-center align-middle">
@@ -47,11 +47,11 @@
 </div>
 
 <div class="add_about container-fluid mb-3 p-0 table-responsive shadow-sm" style="width: 42%;">
-  <h3 class="text-center text-white bg-dark rounded-top mb-0 p-2 border-bottom">新增『INTRODUCTION』資料</h3>
+  <h3 class="text-center text-white bg-dark rounded-top mb-0 p-2 border-bottom">新增『WORK EXPERIENCE』資料</h3>
   <form action="./api/add.php" method="post">
     <table class="table m-0">
       <tr>
-        <td class="text-end text-white align-middle border-end bg-dark">介紹引文 :</td>
+        <td class="text-end text-white align-middle border-end bg-dark">工作經歷 :</td>
         <td class="text-center align-middle">
           <textarea name="text" cols="80" rows="10" required></textarea>
           <input type="hidden" name="table" value="<?=$table?>">

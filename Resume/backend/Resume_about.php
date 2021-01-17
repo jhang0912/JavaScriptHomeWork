@@ -25,13 +25,13 @@
       ?>
         <tr>
           <td class="text-center align-middle"><input type="text" name="name[]" value="<?=$value['name']?>"
-              style="width: 50%; margin: 0 auto;"></td>
+              style="width: 55%; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="en_name[]" value="<?=$value['en_name']?>"
               style="width: 75%; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="gender[]" value="<?=$value['gender']?>"
               style="width: 50%; margin: 0 auto;"></td>
-          <td class="text-center align-middle"><input type="number" min="1" step="1" name="age[]" value="<?=$value['age']?>"
-              style="width: 50%; margin: 0 auto;"></td>
+          <td class="text-center align-middle"><input type="number" min="1" step="1" name="age[]"
+              value="<?=$value['age']?>" style="width: 50%; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="email[]" value="<?=$value['email']?>">
           </td>
           <td class="text-center align-middle"><input type="text" name="city[]" value="<?=$value['city']?>"></td>
@@ -80,19 +80,31 @@
     <table class="table m-0">
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">姓&ensp;&ensp;&ensp;&ensp;名 :</td>
-        <td class="text-start align-middle"><input type="text" name="name" class="w-75" required></td>
+        <td class="text-start align-middle">
+          <input type="text" name="name" class="w-75" required>
+          <span class="form-text">※必填</span>
+        </td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">英文姓名 :</td>
-        <td class="text-start align-middle"><input type="text" name="en_name" class="w-75" required></td>
+        <td class="text-start align-middle">
+          <input type="text" name="en_name" class="w-75" required>
+          <span class="form-text">※必填</span>
+        </td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">性&ensp;&ensp;&ensp;&ensp;別 :</td>
-        <td class="text-start align-middle"><input type="text" name="gender" class="w-75" required></td>
+        <td class="text-start align-middle">
+          <input type="text" name="gender" class="w-75" required>
+          <span class="form-text">※必填</span>
+        </td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">年&ensp;&ensp;&ensp;&ensp;齡 :</td>
-        <td class="text-start align-middle"><input type="number" min="1" step="1" name="age" class="w-75" required></td>
+        <td class="text-start align-middle">
+          <input type="number" min="1" step="1" name="age" class="w-75" required>
+          <span class="form-text">※必填</span>
+        </td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">電子信箱 :</td>
@@ -100,7 +112,10 @@
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">居住城市 :</td>
-        <td class="text-start align-middle"><input type="text" name="city" class="w-75" required></td>
+        <td class="text-start align-middle">
+          <input type="text" name="city" class="w-75" required>
+          <span class="form-text">※必填</span>
+        </td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">Facebook :</td>

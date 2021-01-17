@@ -25,18 +25,14 @@ switch($table){
     $data['github']=$_POST['github'];
     $data['artstation']=$_POST['artstation'];
     break;
-    case "Resume_Introduction":
-
-      break;
-    case "Resume_resume":
-
-      break;
-    case "Resume_portfolio":
-
-      break;
-      default:
-
-      break;
+  case "Resume_portfolio":
+    $data['name']=$_POST['name'];
+    $data['text']=$_POST['text'];
+    $data['href']=$_POST['href'];
+    break;
+  default:
+    $data['text']=$_POST['text'];
+    break;
 }
 
 echo "<pre>";

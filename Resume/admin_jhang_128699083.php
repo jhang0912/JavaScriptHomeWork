@@ -13,26 +13,34 @@
 </head>
 <body>
   <section id="Navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark vw-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <div class="navbar-brand">Admin Awesome</div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="?do=Resume_about">About</a>
+              <a class="nav-link me-3" href="?do=Resume_about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="?do=Resume_Introduction">Introduction</a>
+              <a class="nav-link me-3 " href="?do=Resume_introduction">Introduction</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?do=Resume_resume">Resume</a>
+              <a class="nav-link me-3" href="?do=Resume_education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3" href="?do=Resume_work_experience">Work Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3" href="?do=Resume_personal_development">Personal Development</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?do=Resume_portfolio">Portfolio</a>
             </li>
           </ul>
         </div>
+
+        <div class="float-end"><a href="./api/logout.php" class="btn btn-outline-light text-decoration-none">LOGOUT</a></div>
       </div>
     </nav>
   </section>

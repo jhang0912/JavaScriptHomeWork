@@ -1,3 +1,4 @@
+<div class="container-fluid rounded-top bg-dark text-white text-center h3 mb-3 p-2">About</div>
 <div class="edit_about container-fluid  p-0 table-responsive">
   <form method="post" action="./api/edit.php" enctype="multipart/form-data">
     <table class="table">
@@ -25,13 +26,13 @@
       ?>
         <tr>
           <td class="text-center align-middle"><input type="text" name="name[]" value="<?=$value['name']?>"
-              style="width: 55%; margin: 0 auto;"></td>
+              style="width: 75px; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="en_name[]" value="<?=$value['en_name']?>"
-              style="width: 75%; margin: 0 auto;"></td>
+              style="margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="gender[]" value="<?=$value['gender']?>"
-              style="width: 50%; margin: 0 auto;"></td>
+              style="width: 75px;margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="number" min="1" step="1" name="age[]"
-              value="<?=$value['age']?>" style="width: 50%; margin: 0 auto;"></td>
+              value="<?=$value['age']?>" style="width: 50px; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="email[]" value="<?=$value['email']?>">
           </td>
           <td class="text-center align-middle"><input type="text" name="city[]" value="<?=$value['city']?>"></td>
@@ -43,9 +44,11 @@
           </td>
           <td class="text-center align-middle">
             <img src="./img/<?=$value['img']?>" class="rounded" style="width:100px; height:100px;">
-            <a href="?do=update_img&table=<?=$table?>&id=<?=$value['id']?>">
-              <button type="button" class="btn btn-outline-dark btn-sm mt-2">更新圖片</button>
-            </a>
+            <div>
+              <a href="?do=update_img&table=<?=$table?>&id=<?=$value['id']?>">
+                <button type="button" class="btn btn-outline-dark btn-sm mt-2">更新圖片</button>
+              </a>
+            </div>
           </td>
           <td class="text-center align-middle">
             <input class="form-check-input" type="radio" name="display[]" value="<?=$value['id']?>"

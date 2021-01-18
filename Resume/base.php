@@ -9,6 +9,7 @@ $Education=new DB('Resume_education');
 $Work_experience=new DB('Resume_work_experience');
 $Personal_development=new DB('Resume_personal_development');
 $Portfolio=new DB('Resume_portfolio');
+$Skills=new DB('Resume_skills');
 
 class DB{
 
@@ -41,6 +42,7 @@ class DB{
     if(isset($arg[1])){
       $sql .= $arg[1];
     }
+
 
     return $this->pdo->query($sql)->fetchAll();
   }
@@ -113,6 +115,7 @@ class DB{
     }else{
       $sql="insert into $this->table  (`".implode("`,`",array_keys($arr))."`) values('".implode("','",$arr)."')";
     }
+    // echo $sql;
     return $this->pdo->exec($sql);
   }
 
@@ -128,4 +131,9 @@ function to($url){
   header("location:".$url);
 }
 
+$portfolio=$Portfolio->q('SELECT * FROM `Resume_portfolio` WHERE `display` != 0 ORDER BY `display`');
+
 ?>
+
+
+

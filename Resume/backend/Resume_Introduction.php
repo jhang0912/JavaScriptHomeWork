@@ -1,3 +1,4 @@
+<div class="container-fluid rounded-top bg-dark text-white text-center h3 mb-3 p-2">Introduction</div>
 <div class="edit_about container-fluid  p-0 table-responsive">
   <form method="post" action="./api/edit.php" enctype="multipart/form-data">
     <table class="table">

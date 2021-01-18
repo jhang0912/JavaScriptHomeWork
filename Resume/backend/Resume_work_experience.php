@@ -1,9 +1,11 @@
+<div class="container-fluid rounded-top bg-dark text-white text-center h3 mb-3 p-2">Work Experience</div>
 <div class="edit_about container-fluid  p-0 table-responsive">
   <form method="post" action="./api/edit.php" enctype="multipart/form-data">
     <table class="table">
       <thead>
         <tr class="bg-dark text-white">
-          <th scope="col" class="start text-center">工作經歷</th>
+          <th scope="col" class="start text-center">公司</th>
+          <th scope="col" class="text-center">工作經歷</th>
           <th scope="col" class="text-center">顯示</th>
           <th scope="col" class="end text-center">刪除</th>
         </tr>
@@ -16,9 +18,11 @@
       ?>
         <tr>
           <td class="text-center align-middle">
+            <input type="text" name="company[]" value="<?=$value['company'];?>">
+          </td>
+          <td class="text-center align-middle">
             <textarea name="text[]" cols="100" rows="5"><?=$value['text'];?></textarea>
           </td>
-          
           <td class="text-center align-middle">
             <input class="form-check-input" type="radio" name="display[]" value="<?=$value['id']?>"
               <?=($value['display']==1)?'checked':''?>>

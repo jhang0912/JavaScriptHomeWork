@@ -31,6 +31,7 @@ switch($table){
     $data['href']=$_POST['href'];
     break;
   default:
+    $data['name']=$_POST['name'];
     $data['text']=$_POST['text'];
     break;
 }

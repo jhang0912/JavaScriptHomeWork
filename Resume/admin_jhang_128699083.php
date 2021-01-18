@@ -37,6 +37,9 @@
             <li class="nav-item">
               <a class="nav-link" href="?do=Resume_portfolio">Portfolio</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?do=Resume_skills">Skills</a>
+            </li>
           </ul>
         </div>
 
@@ -49,12 +52,12 @@
     <div class="Content p-4">
       <div class="con container-fluid col-12 p-0 rounded shadow-sm d-flex flex-wrap justify-content-center align-item-center">
       <?php
-          $do=(!empty($_GET['do']))?$_GET['do']:"";
+          $do=(!empty($_GET['do']))?$_GET['do']:"Resume_about";
           $file="./backend/".$do.".php";
           if(file_exists($file)){
             include $file;
           }else{
-            include "backend/about.php";
+            include "backend/Resume_about.php";
           }
 			?>
       </div>

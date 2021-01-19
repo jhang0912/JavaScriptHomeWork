@@ -8,6 +8,10 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- uikit -->
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="css/uikit/uikit.css"/>
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -24,10 +28,6 @@
   <!-- slick -->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-  <!-- uikit -->
-  <link rel="stylesheet" href="css/uikit.min.css" />
-  <script src="js/uikit.min.js"></script>
-  <script src="js/uikit-icons.min.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- title-icon -->
@@ -55,14 +55,14 @@
       </div>
     </nav>
 
-    <div class="container-fluid d-flex d-md-none justify-content-center">
+    <div class="hidden_nav container-fluid d-flex d-md-none justify-content-center" style="z-index: 100;">
       <div class="btn btn-outline-light " data-toggle="collapse" href="#list" role="button" aria-expanded="false"
         aria-controls="list">
         <i class="fas fa-bars m-0 h1"></i>
       </div>
     </div>
 
-    <div class="collapse container-fluid d-md-none" id="list">
+    <div class="collapse container-fluid d-md-none" id="list" style="z-index: 100;">
       <a href="#" class="text-decoration-none">
         <div id="about2" class="col-12 d-flex align-items-center justify-content-center border-bottom border-white">
           <div class="text-white">ABOUT</div>

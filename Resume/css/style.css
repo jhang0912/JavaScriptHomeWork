@@ -19,8 +19,9 @@ body{
   letter-spacing: 0;
   min-width: 136.15px;
 }
-nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fadeInDown{
+nav.navbar.navbar-expand-lg.flex-nowrap.animate__animated.animate__fadeInDown{
   --animate-duration: 1.5s;
+  z-index: 100;
 }
 #header a.nav-item.nav-link.text-left{
   color: white;
@@ -65,13 +66,14 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   height: 100%;
 }
 @keyframes scale {
-  0%{transform:scale(1.1) ;}
+  0%{transform:scale(1.15) ;}
   100%{transform:scale(1);}
 }
 
 #header h1.centerText{
+  z-index: 100;
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: inline-block;
@@ -90,7 +92,7 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   letter-spacing: 0.2rem;
   box-sizing: border-box;
   white-space:nowrap;
-  font-size: 8.5rem;
+  font-size: 9.5rem;
   opacity: 0;
   text-shadow: 0.5px 0.5px 10px #000000;
   }
@@ -99,11 +101,12 @@ nav.navbar.navbar-expand-lg.sticky-top.flex-nowrap.animate__animated.animate__fa
   100%{opacity: 1;}
 }
 #header .h2.text-white{
-position: absolute;
-top:57%;
-left: 50%;
-width: 60vw;
-transform: translate(-50%,-50%);
+  z-index: 100;
+  position: absolute;
+  top:57%;
+  left: 50%;
+  width: 60vw;
+  transform: translate(-50%,-50%);
 }
 #header .centerline.text-center{
   --animate-duration: 1.5s;
@@ -129,11 +132,18 @@ transform: translate(-50%,-50%);
   height: 1px;
 }
 #header .scrollDown{
+  z-index: 100;
   position: absolute;
   bottom:0%;
   left: 50%;
   transform: translate(-50%,-50%);
   cursor: pointer;
+}
+#header .point1{
+  z-index: 100;
+}
+#header .point2{
+  z-index: 100;
 }
 #header .icon{
   width: 4.75rem;
@@ -153,6 +163,7 @@ left: 40%;
   text-shadow: 0.5px 0.5px 10px #000000;
 }
 #header .iconGroup{
+  z-index: 100;
   position: absolute;
   box-sizing: border-box;
   top: 62%;
@@ -518,6 +529,9 @@ left: 40%;
 }
 #Resume .text{
   font-size: 1.5rem;
+}
+#Resume h2{
+  color: #e0b271;
 }
 @media (max-width:991px) {
   #Resume .content {

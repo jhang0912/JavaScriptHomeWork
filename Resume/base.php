@@ -4,6 +4,7 @@ session_start();
 
 $Admin=new DB('Resume_admin');
 $About=new DB('Resume_about');
+$Job=new DB('Resume_job_requirements');
 $Introduction=new DB('Resume_introduction');
 $Education=new DB('Resume_education');
 $Work_experience=new DB('Resume_work_experience');

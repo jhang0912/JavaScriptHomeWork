@@ -1,6 +1,7 @@
 <?php
 // $about=$About->find(['display'=>'1']);
 $introduction=$Introduction->find(['display'=>'1']);
+$job=$Job->q('SELECT * FROM `Resume_job_requirements` WHERE `display` != 0 ORDER BY `display`');
 ?>
 <div class="img_name_con">
   <div class="img_name text-white wow animate__animated animate__fadeInUp animate__delay-2s"><?=$about['en_name']?>
@@ -23,6 +24,7 @@ $introduction=$Introduction->find(['display'=>'1']);
       <i class="fas fa-caret-right text-white"><span> Age : <?=$about['age']?></span></i><br>
       <i class="fas fa-caret-right text-white"><span> Email : <?=$about['email']?></span></i><br>
       <i class="fas fa-caret-right text-white"><span> City : <?=$about['city']?></span></i><br>
+      <i class="fas fa-caret-right text-white"><span> Job Objective : <?=$job[0]['job']?> / <?=$job[1]['job']?></span></i><br>
     </div>
 
     <div class="iconGroup2 d-flex mt-2">

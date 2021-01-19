@@ -186,7 +186,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 5000,
     speed:1500,
     adaptiveHeight:true,
     vertical:true,
@@ -203,7 +203,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 5000,
     adaptiveHeight:true,
     speed:1500,
     vertical:true,
@@ -220,7 +220,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 5000,
     adaptiveHeight:true,
     speed:1500,
     vertical:true,
@@ -290,10 +290,12 @@ $('.controlPoint').on('click',function(e){
   var img = target.id; 
   $(target).css({'animation':'opacity 0.5s linear 1 forwards'});
   $(target).siblings().css({'animation':'opacity2 0.5s linear 1 forwards'});
-  $(mainImg[img]).css({'animation':'opacity3 3s linear 1 forwards','z-index':'-1'});
-  $(mainImg2[img]).css({'animation':'opacity4 3s ease-out 1 forwards','z-index':'0'})
+
+  $(mainImg[img]).css({'animation':'opacity3 3s linear 1 forwards','z-index':'0'});
+  $(mainImg2[img]).css({'animation':'opacity4 3s ease-out 1 forwards','z-index':'1'})
   
 })
+
 
 window.addEventListener('scroll',function(){
   var y = this.scrollY;
@@ -331,7 +333,6 @@ $('.sort').on('click',function(e){
   }
   let target = e.target;
   let id = target.id;
-  // console.log(id);
   $('#'+item[id][0]).siblings('span').css({'animation':'opacity5 0.75s ease-out 1 forwards'});
   $('#'+item[id][1]).siblings('div').css({'animation':'opacity5 0.75s ease-out 1 forwards'});
   setTimeout(function(){

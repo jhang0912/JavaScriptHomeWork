@@ -34,7 +34,7 @@
             </div>
           </td>
           <td class="text-center align-middle">
-            <input type="number" min="0" max="6" class="w-25" name="display[]" value="<?=$value['display']?>">
+            <input type="number" min="0" max="6" class="" name="display[]" value="<?=$value['display']?>">
           </td>
           <td class="text-center align-middle">
             <input class="form-check-input" type="checkbox" name="del[]" value="<?=$value['id']?>">

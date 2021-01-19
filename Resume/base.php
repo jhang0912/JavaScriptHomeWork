@@ -43,6 +43,7 @@ class DB{
       $sql .= $arg[1];
     }
 
+    // echo $sql;
 
     return $this->pdo->query($sql)->fetchAll();
   }
@@ -131,9 +132,4 @@ function to($url){
   header("location:".$url);
 }
 
-$portfolio=$Portfolio->q('SELECT * FROM `Resume_portfolio` WHERE `display` != 0 ORDER BY `display`');
-
 ?>
-
-
-

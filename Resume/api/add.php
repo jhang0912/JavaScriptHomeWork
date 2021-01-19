@@ -25,13 +25,20 @@ switch($table){
     $data['github']=$_POST['github'];
     $data['artstation']=$_POST['artstation'];
     break;
+  case "Resume_education":
+    $data['school']=$_POST['school'];
+    $data['text']=$_POST['text'];
+    break;
+  case "Resume_work_experience":
+    $data['company']=$_POST['company'];
+    $data['text']=$_POST['text'];
+    break;
   case "Resume_portfolio":
     $data['name']=$_POST['name'];
     $data['text']=$_POST['text'];
     $data['href']=$_POST['href'];
     break;
   default:
-    $data['name']=$_POST['name'];
     $data['text']=$_POST['text'];
     break;
 }

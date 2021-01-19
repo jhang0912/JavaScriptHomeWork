@@ -1,5 +1,5 @@
 <?php
-$about=$About->find(['display'=>'1']);
+// $about=$About->find(['display'=>'1']);
 $introduction=$Introduction->find(['display'=>'1']);
 ?>
 <div class="img_name_con">

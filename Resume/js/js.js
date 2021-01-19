@@ -40,7 +40,7 @@ $('.nav-item').on('click',function(e){
       break;
       case 'skills':
       position = 4;
-      $('html,body').animate({scrollTop:(document.body.clientHeight-937)},2700);
+      $('html,body').animate({scrollTop:(document.body.clientHeight-$(window).height())},2700);
       $(".position").animate({height:Height[position]},2700)
       $('#header .num').text(position+1);
       break;
@@ -80,7 +80,7 @@ $('#list .col-12.d-flex').on('click',function(e){
         break;
         case 'skills2':
           position = 4;
-        $('html,body').animate({scrollTop:(document.body.clientHeight-812)},3000);
+        $('html,body').animate({scrollTop:(document.body.clientHeight-$(window).height())},3000);
         $(".position").animate({height:Height[position]},3000)
         $('#header .num').text(position+1);
         break;
@@ -141,7 +141,7 @@ var mate = {
   resume:'line2',
   skills:'line3',
   portfolio:'line4',
-  contacts:'line5'
+  login:'line5'
 };
 $('.nav-item').on('mouseover',function(){
   var target = this.id;
@@ -186,7 +186,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 4500,
     speed:1500,
     adaptiveHeight:true,
     vertical:true,
@@ -203,7 +203,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 4500,
     adaptiveHeight:true,
     speed:1500,
     vertical:true,
@@ -220,7 +220,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 4500,
     adaptiveHeight:true,
     speed:1500,
     vertical:true,

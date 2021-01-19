@@ -5,18 +5,17 @@ echo $table=$_POST['table'];/*判斷資料從哪個頁面傳過來*/
 $db=new DB($table);/*登入該資料表 */
 $data=$db->find($_POST['id']);
 
-$file=['icon','img'];
 
 if($table=='Resume_skills'){
   if(!empty($_FILES['img']['tmp_name'])){
     $filename=$_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['tmp_name'],"../$file[0]/".$filename);
+    move_uploaded_file($_FILES['img']['tmp_name'],"../icon/".$filename);
     $data['img']=$filename;
   }
 }else{
   if(!empty($_FILES['img']['tmp_name'])){
     $filename=$_FILES['img']['name'];
-    move_uploaded_file($_FILES['img']['tmp_name'],"../$file[1]/".$filename);
+    move_uploaded_file($_FILES['img']['tmp_name'],"../img/".$filename);
     $data['img']=$filename;
   }
 }

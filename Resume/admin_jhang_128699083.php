@@ -1,6 +1,7 @@
 <?php include_once "base.php";?>
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,13 +10,16 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <!-- css -->
   <link rel="stylesheet" href="./css/admin.css">
+  <!-- title-icon -->
+  <link rel="icon" href="./img/title_icon.ico" type="image/x-icon"/>
   <title>Admin</title>
 </head>
+
 <body>
   <section id="Navbar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="navbar-brand">Admin Awesome</div>
+        <div class="navbar-brand">JHANG YUE KAI</div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -35,7 +39,7 @@
               <a class="nav-link me-3" href="?do=Resume_personal_development">Personal Development</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?do=Resume_portfolio">Portfolio</a>
+              <a class="nav-link me-3" href="?do=Resume_portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?do=Resume_skills">Skills</a>
@@ -43,15 +47,17 @@
           </ul>
         </div>
 
-        <div class="float-end"><a href="./api/logout.php" class="btn btn-outline-light text-decoration-none">LOGOUT</a></div>
+        <div class="float-end"><a href="./api/logout.php" class="btn btn-outline-light text-decoration-none">LOGOUT</a>
+        </div>
       </div>
     </nav>
   </section>
 
-  <saction id="Content">
+  <section id="Content">
     <div class="Content p-4">
-      <div class="con container-fluid col-12 p-0 rounded shadow-sm d-flex flex-wrap justify-content-center align-item-center">
-      <?php
+      <div
+        class="con container-fluid col-12 p-0 rounded shadow-sm d-flex flex-wrap justify-content-center align-item-center">
+        <?php
           $do=(!empty($_GET['do']))?$_GET['do']:"Resume_about";
           $file="./backend/".$do.".php";
           if(file_exists($file)){
@@ -62,7 +68,7 @@
 			?>
       </div>
     </div>
-  </saction>
+  </section>
 
   <section id="BS">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

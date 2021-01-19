@@ -33,27 +33,29 @@
 <body>
   <section id="Login">
     <form action="./api/login_check.php" method="post">
-      <div class="con">
-        <div class="title col-12 text-center">welcome</div>
-        <div class="form_con container-fluid d-flex flex-wrap justify-content-center align-item-center p-4">
-          <div class="container mb-4">
-            <?php 
+      <div class="con animate__animated animate__fadeIn">
+        <div class="">
+          <div class="title col-12 text-center">welcome</div>
+          <div class="form_con container-fluid d-flex flex-wrap justify-content-center align-item-center p-4">
+            <div class="container mb-4">
+              <?php 
               if(isset($_GET['login_error']))
               {echo "<div class='text-danger text-center font-weight-bolder h6'>",$_GET['login_error'],"</div>";}
             ?>
-          </div>
+            </div>
 
-          <div class="account container mb-4">
-            <label for="account" class="form-label m-0">Account</label>
-            <input type="text" name="acc" class="form-control" id="account" required>
-          </div>
+            <div class="account container mb-4">
+              <label for="account" class="form-label m-0">Account</label>
+              <input type="text" name="acc" class="form-control" id="account" required>
+            </div>
 
-          <div class="password container mb-4">
-            <label for="password" class="form-label m-0">Password</label>
-            <input type="password" name="pass" class="form-control" id="password" required>
-          </div>
-          <div class="submit container">
-            <input type="submit" class="sub_button w-100 btn btn-lg" value="Login">
+            <div class="password container mb-4">
+              <label for="password" class="form-label m-0">Password</label>
+              <input type="password" name="pass" class="form-control" id="password" required>
+            </div>
+            <div class="submit container">
+              <input type="submit" class="sub_button w-100 btn btn-lg" value="Login">
+            </div>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ body{
   position: relative;
   overflow: hidden;
 }
-#header .col-sm-12.col-md-1.col-lg-1.col-xl-1.border.border-white.mb-0.text-center.navbar-text.h1{
+#header .J_title{
   font-family: 'Cinzel', serif;
   letter-spacing: 0;
   min-width: 136.15px;
@@ -777,14 +777,18 @@ left: 40%;
   color: #cfa05e;
   font-size: 1.75rem;
 }
+#Portfolio .img_one{
+  width: 65%;
+  border: 1.25px solid #cfa05e;
+  margin: 0 auto;
+}
+#Portfolio p{
+  font-family: 'Cinzel', serif;
+  color: #141b2e;
+}
 #Portfolio .text_one{
   border-width: 50%;
   font-size: 1rem;
-}
-#Portfolio img{
-  width: 60%;
-  border: 1.25px solid #cfa05e;
-  margin: 0 auto;
 }
 #Portfolio .num{
   font-family: 'Cinzel', serif;
@@ -900,10 +904,14 @@ left: 40%;
     display: none;
   }
 }
-#Portfolio2 img{
-  width: 60%;
+#Portfolio2 .img_one{
+  width: 65%;
   border: 1.25px solid #cfa05e;
   margin: 0 auto;
+}
+#Portfolio2 p{
+  font-family: 'Cinzel', serif;
+  color: #141b2e;
 }
 #Portfolio2 .num{
   font-family: 'Cinzel', serif;

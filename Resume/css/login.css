@@ -18,6 +18,7 @@
   width: 500px;
   height:60%;
   background-color: white;
+  --animate-duration: 2.5s;
 }
 @media (max-width:576px){
   #Login .con{

@@ -24,6 +24,10 @@
   <!-- slick -->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <!-- uikit -->
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- title-icon -->
@@ -38,7 +42,7 @@
     <div class="main_img vh-100 col-12 p-0" style="background-image: url('./img/main_01.jpg'); " id="main_img1"></div>
 
     <nav class="navbar navbar-expand-lg flex-nowrap animate__animated animate__fadeInDown ">
-      <div class="col-sm-12 col-lg-1 col-xl-1 border border-white mb-0 text-center navbar-text h1 text-white">
+      <div class="J_title col-sm-12 col-lg-1 col-xl-1 border border-white mb-0 text-center navbar-text h1 text-white">
         J.</div>
       <div class="container-fluid d-none d-lg-flex flex-nowrap justify-content-sm-end">
         <a class="nav-item nav-link text-left mr-3" id="about" href="#">ABOUT<div class="line " id="line1"></div></a>
@@ -46,6 +50,8 @@
         <a class="nav-item nav-link text-left mr-3" id="portfolio" href="#">PORTFOLIO<div class="line " id="line4">
           </div></a>
         <a class="nav-item nav-link text-left mr-3" id="skills" href="#">SKILLS<div class="line " id="line3"></div></a>
+        <a class="nav-item nav-link text-left mr-3" id="login" href="./login.php">LOGIN<div class="line " id="line5"></div></a>
+      </div>
       </div>
     </nav>
 
@@ -75,6 +81,11 @@
       <a href="#" class="text-decoration-none">
         <div id="skills2" class="col-12 d-flex align-items-center justify-content-center border-bottom border-white">
           <div class="text-white">SKILLS</div>
+        </div>
+      </a>
+      <a href="./login.php" class="text-decoration-none">
+        <div class="col-12 d-flex align-items-center justify-content-center border-bottom border-white">
+          <div class="text-white">LOGIN</div>
         </div>
       </a>
     </div>
@@ -218,7 +229,7 @@
         <div class="left_two_container h-100 col-6 p-0 d-flex flex-wrap">
           <!-- 作品集區 1 -->
           <?php include "./front/portfolio_1.php" ?>
-          
+
         </div>
 
       </div>
@@ -251,7 +262,7 @@
     <div class="title col-12 text-center pt-2 pb-2">Portfolio</div>
     <!-- 作品集區 4 -->
     <?php include "./front/portfolio_4.php" ?>
-      <div class="line_two"></div>
+    <div class="line_two"></div>
 
     </div>
   </section>

@@ -55,8 +55,15 @@
   <form action="./api/add.php" method="post">
     <table class="table m-0">
       <tr>
+        <td class="text-end text-white align-middle border-end bg-dark">公&ensp;&ensp;&ensp;&ensp;司 :</td>
+        <td class="text-strat align-middle">
+          <input type="text" name="company">
+          <input type="hidden" name="table" value="<?=$table?>">
+      </td>
+      </tr>
+      <tr>
         <td class="text-end text-white align-middle border-end bg-dark">工作經歷 :</td>
-        <td class="text-center align-middle">
+        <td class="text-start align-middle">
           <textarea name="text" cols="80" rows="10" required></textarea>
           <input type="hidden" name="table" value="<?=$table?>">
         </td>

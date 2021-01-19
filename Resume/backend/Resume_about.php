@@ -29,8 +29,12 @@
               style="width: 75px; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="en_name[]" value="<?=$value['en_name']?>"
               style="margin: 0 auto;"></td>
-          <td class="text-center align-middle"><input type="text" name="gender[]" value="<?=$value['gender']?>"
-              style="width: 75px;margin: 0 auto;"></td>
+          <td class="text-center align-middle">
+            <select name="gender[]" style="width: 75px;margin: 0 auto;">
+              <option value="male" <?php if($value['gender']=='male'){echo 'selected';}?>>male</option>
+              <option value="female" <?php if($value['gender']=='female'){echo 'selected';}?>>female</option>
+            </select>
+          </td>
           <td class="text-center align-middle"><input type="number" min="1" step="1" name="age[]"
               value="<?=$value['age']?>" style="width: 50px; margin: 0 auto;"></td>
           <td class="text-center align-middle"><input type="text" name="email[]" value="<?=$value['email']?>">
@@ -98,7 +102,10 @@
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">性&ensp;&ensp;&ensp;&ensp;別 :</td>
         <td class="text-start align-middle">
-          <input type="text" name="gender" class="w-75" required>
+          <select name="gender" required>
+            <option value="male">male</option>
+            <option value="female">female</option>
+          </select>
           <span class="form-text">※必填</span>
         </td>
       </tr>

@@ -14,7 +14,7 @@
         </div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[2]['href'])){echo $portfolio[2]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[2]['href'])){echo $portfolio[2]['href'];}?>" target="blank">
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 1.35"></p>
           </a>
         </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[5]['href'])){echo $portfolio[5]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[5]['href'])){echo $portfolio[5]['href'];}?>" target="blank">
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 1.35"></p>
           </a>
         </div>

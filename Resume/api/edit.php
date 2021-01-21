@@ -62,4 +62,4 @@ foreach($_POST['id'] as $key => $id){
   }
 }
 
-to("../admin_jhang_128699083.php?do=$table");
+to("../admin.php?do=$table");

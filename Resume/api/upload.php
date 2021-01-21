@@ -30,4 +30,4 @@ echo "</pre>";
 
 $db->save($data);
 
-to("../admin_jhang_128699083.php?do=$table");
+to("../admin.php?do=$table");

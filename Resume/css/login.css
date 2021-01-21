@@ -16,7 +16,7 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 500px;
-  height:60%;
+  height:55%;
   background-color: white;
   --animate-duration: 2.5s;
 }

@@ -38,6 +38,10 @@ switch($table){
     $data['text']=$_POST['text'];
     $data['href']=$_POST['href'];
     break;
+  case "Resume_skills":
+    $data['name']=$_POST['name'];
+    $data['text']=$_POST['text'];
+    break;
   default:
     $data['text']=$_POST['text'];
     break;
@@ -49,4 +53,4 @@ echo "</pre>";
 
 
 $db->save($data);
-to("../admin_jhang_128699083.php?do=$table");
+to("../admin.php?do=$table");

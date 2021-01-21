@@ -1,4 +1,8 @@
-<?php include_once "base.php";?>
+<?php include_once "base.php";
+if(empty($_SESSION['login']) || $_SESSION['login']!='gjipyeqcz'){
+  to('./login.php');
+}
+?>
 <!doctype html>
 <html lang="en">
 

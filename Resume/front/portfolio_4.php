@@ -15,7 +15,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[0]['href'])){echo $portfolio[0]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[0]['href'])){echo $portfolio[0]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>
@@ -46,7 +46,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[1]['href'])){echo $portfolio[1]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[1]['href'])){echo $portfolio[1]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>
@@ -82,7 +82,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[2]['href'])){echo $portfolio[2]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[2]['href'])){echo $portfolio[2]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>
@@ -113,7 +113,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[3]['href'])){echo $portfolio[3]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[3]['href'])){echo $portfolio[3]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>
@@ -149,7 +149,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[4]['href'])){echo $portfolio[4]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[4]['href'])){echo $portfolio[4]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>
@@ -180,7 +180,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[5]['href'])){echo $portfolio[5]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[5]['href'])){echo $portfolio[5]['href'];}?>" target='blank'>
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 2.5"></p>
           </a>
         </div>

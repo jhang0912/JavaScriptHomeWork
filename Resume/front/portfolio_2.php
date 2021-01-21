@@ -12,7 +12,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[1]['href'])){echo $portfolio[1]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[1]['href'])){echo $portfolio[1]['href'];}?>" target="blank">
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 1.35"></p>
           </a>
         </div>
@@ -40,7 +40,7 @@
         <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle text-white"></div>
         <div class="uk-position-center">
           <p class="uk-transition-slide-top h3">LINK</p>
-          <a href="<?php if(!empty($portfolio[4]['href'])){echo $portfolio[4]['href'];}?>">
+          <a href="<?php if(!empty($portfolio[4]['href'])){echo $portfolio[4]['href'];}?>" target="blank">
             <p class="link_hover uk-transition-slide-bottom" uk-icon="icon: link;ratio: 1.35"></p>
           </a>
         </div>

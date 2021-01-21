@@ -15,7 +15,7 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Kanit:wght@200;400;700&family=Yesteryear&family=Cinzel:wght@700&family=Lato&family=Playfair+Display:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Kanit:wght@200;400;700&family=Yesteryear&family=Cinzel:wght@700&family=Lato&family=Playfair+Display:wght@700&family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
   <!-- animated.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

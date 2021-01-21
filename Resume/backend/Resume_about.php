@@ -129,7 +129,7 @@
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">Facebook :</td>
-        <td class="text-start align-middle"><input type="text" name="Facebook" class="w-75"></td>
+        <td class="text-start align-middle"><input type="text" name="facebook" class="w-75"></td>
       </tr>
       <tr>
         <td class="text-end text-white align-middle border-end bg-dark">github :</td>
